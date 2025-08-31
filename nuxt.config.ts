@@ -21,6 +21,10 @@ export default defineNuxtConfig({
 		plugins: [vuetify()],
 	},
 
-	modules: ['@nuxtjs/apollo', ['@pinia/nuxt', { autoImports: ['defineStore', 'acceptHMRUpdate'] }]],
+	modules: [
+		'@nuxtjs/apollo',
+		['@pinia/nuxt', { autoImports: ['defineStore', 'acceptHMRUpdate'] }],
+		'@nuxtjs/tailwindcss',
+	],
 	compatibilityDate: '2024-11-11',
 })
