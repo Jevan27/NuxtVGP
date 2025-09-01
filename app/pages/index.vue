@@ -5,9 +5,10 @@
 		<navbar />
 		<hero-banner />
 	</section>
+	<LaunchesSection />
 	<RocketSection />
 </template>
 
 <script lang="ts" setup>
-import RocketSection from '~/components/RocketSection.vue'
+import LaunchesSection from '~/components/LaunchesSection.vue'
 </script>
