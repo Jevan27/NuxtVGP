@@ -1,4 +1,4 @@
-<!-- eslint-disable vue/valid-v-slot -->
+<!-- src/components/RocketSection.vue -->
 <template>
 	<section
 		ref="section"
@@ -21,6 +21,7 @@
 
 				<v-btn
 					ref="button"
+					to="/rockets"
 					class="bg-gray-500 hover:bg-black text-black hover:!text-white rounded-xl px-6 py-3 font-semibold text-lg shadow-lg transition-colors duration-300"
 				>
 					See All Rockets
@@ -30,60 +31,23 @@
 	</section>
 </template>
 
-<script setup>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { initRocketSectionAnimations } from '@/animations/rocketSectionAnim'
 
-gsap.registerPlugin(ScrollTrigger)
-
-const section = ref(null)
-const header = ref(null)
-const desc = ref(null)
-const button = ref(null)
+const section = ref<HTMLElement | null>(null)
+const header = ref<HTMLElement | null>(null)
+const desc = ref<HTMLElement | null>(null)
+const button = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-	// Start elements off-screen to the right
-	gsap.set([header.value, desc.value], { opacity: 0, x: 100 })
-	gsap.set(button.value, { opacity: 0, y: 20 })
-
-	// Timeline tied to scroll progress
-	gsap.timeline({
-		scrollTrigger: {
-			trigger: section.value,
-			start: 'top 80%', // animation begins when section enters
-			end: 'bottom 20%', // animation completes near bottom
-			scrub: true, // <-- ties animation progress to scroll
-		},
-	})
-		// Slide in header
-		.to(header.value, {
-			x: 0,
-			opacity: 1,
-			duration: 1,
-			ease: 'power3.out',
+	if (section.value && header.value && desc.value && button.value) {
+		initRocketSectionAnimations({
+			section: section.value,
+			header: header.value,
+			desc: desc.value,
+			button: button.value,
 		})
-		// Slide in description
-		.to(
-			desc.value,
-			{
-				x: 0,
-				opacity: 1,
-				duration: 1,
-				ease: 'power3.out',
-			},
-			'-=0.5',
-		)
-		// Fade in button
-		.to(
-			button.value,
-			{
-				opacity: 1,
-				y: 0,
-				duration: 1,
-				ease: 'power2.out',
-			},
-			'-=0.3',
-		)
+	}
 })
 </script>

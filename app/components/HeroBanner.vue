@@ -1,4 +1,4 @@
-<!-- eslint-disable vue/no-unused-refs -->
+<!-- src/components/Hero.vue -->
 <template>
 	<div class="relative h-screen w-full overflow-hidden">
 		<!-- Background video -->
@@ -22,56 +22,17 @@
 	</div>
 </template>
 
-<script setup>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { initHeroAnimations } from '@/animations/heroAnim'
 
-gsap.registerPlugin(ScrollTrigger)
-
-const title = ref(null)
-const subtitle = ref(null)
-const content = ref(null)
+const title = ref<HTMLElement | null>(null)
+const subtitle = ref<HTMLElement | null>(null)
+const content = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-	// 🔹 1) Intro animation on page load
-	const intro = gsap.timeline()
-	intro.from(title.value, {
-		y: 80,
-		opacity: 0,
-		duration: 1.2,
-		ease: 'power4.out',
-	})
-	intro.from(
-		subtitle.value,
-		{
-			y: 40,
-			opacity: 0,
-			duration: 1,
-			ease: 'power2.out',
-		},
-		'-=0.6', // overlap with title
-	)
-
-	// 🔹 2) Scroll scrub animation (fade out while scrolling)
-	gsap.timeline({
-		scrollTrigger: {
-			trigger: content.value,
-			start: 'top top', // when content hits top of viewport
-			end: 'bottom top', // until it scrolls out
-			scrub: true, // smooth link to scroll
-		},
-	})
-		.fromTo(
-			title.value,
-			{ y: 0, opacity: 1 }, // starting state
-			{ y: -80, opacity: 0, ease: 'power4.out' }, // end state
-		)
-		.fromTo(
-			subtitle.value,
-			{ y: 0, opacity: 1 }, // starting state
-			{ y: -40, opacity: 0, ease: 'power2.out' }, // end state
-			'-=0.6',
-		)
+	if (title.value && subtitle.value && content.value) {
+		initHeroAnimations({ title: title.value, subtitle: subtitle.value, content: content.value })
+	}
 })
 </script>

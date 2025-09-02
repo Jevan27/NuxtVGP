@@ -5,10 +5,14 @@
 		<navbar />
 		<hero-banner />
 	</section>
-	<LaunchesSection />
+	<LaunchesSection
+		title="SpaceX Launches"
+		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
+		:show-button="true"
+		background-type="video"
+		background-src="/videos/rockets_bg.mp4"
+	/>
 	<RocketSection />
 </template>
 
-<script lang="ts" setup>
-import LaunchesSection from '~/components/LaunchesSection.vue'
-</script>
+<script lang="ts" setup></script>

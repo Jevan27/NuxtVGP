@@ -1,0 +1,90 @@
+/* Table text */
+.custom-table th,
+.custom-table td {
+	@apply text-white;
+	line-height: 1.8rem;
+	font-size: 1rem;
+}
+
+/* Headers always white */
+.custom-table th,
+.custom-table .v-data-table-header__content {
+	color: white !important;
+}
+
+/* Sorted state */
+.custom-table .v-data-table__th--sorted,
+.custom-table .v-data-table__th--sorted .v-data-table-header__content {
+	color: white !important;
+	background-color: transparent !important;
+}
+
+/* Bold uppercase headers */
+.custom-table th {
+	@apply text-white font-bold;
+	font-size: 1rem !important;
+	line-height: 2rem;
+	text-transform: uppercase;
+}
+
+.custom-table table {
+	border-collapse: separate !important;
+	border-spacing: 0 3rem !important;
+}
+
+/* Row styles */
+.custom-table td {
+	border-bottom: 1px solid white !important;
+	padding: 1rem !important;
+	padding-bottom: 3rem !important;
+}
+
+/* Header line */
+.custom-table .v-data-table__thead {
+	border-top: 2px solid white !important;
+	border-bottom: 2px solid white !important;
+}
+
+/* Kill hover */
+.custom-table thead tr:hover,
+.custom-table thead th:hover,
+.custom-table .v-data-table__thead tr:hover,
+.custom-table .v-data-table__thead th:hover,
+.custom-table .v-data-table-header__content:hover {
+	background-color: transparent !important;
+	transition: none !important;
+	color: white !important;
+}
+
+.custom-table .v-data-table__th--sorted,
+.custom-table .v-data-table__th--sorted .v-data-table-header__content {
+	background-color: transparent !important;
+	color: white !important;
+}
+
+.custom-table th:nth-child(4) {
+	white-space: nowrap !important;
+	min-width: 120px;
+}
+
+/* 🎨 White v-select */
+.custom-select .v-field {
+	color: white !important;
+}
+
+.custom-select .v-label {
+	color: white !important;
+}
+
+.custom-select .v-field__outline {
+	border-color: white !important;
+}
+
+.custom-select .v-select__selection-text {
+	color: white !important;
+}
+
+.custom-select .v-list-item-title {
+	color: black !important;
+	background: white !important;
+}

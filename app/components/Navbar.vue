@@ -17,6 +17,7 @@
 			<li><NuxtLink to="/" class="nav-item">Home</NuxtLink></li>
 			<li><NuxtLink to="/launches" class="nav-item">Launches</NuxtLink></li>
 			<li><NuxtLink to="/rockets" class="nav-item">Rockets</NuxtLink></li>
+			<li><NuxtLink to="/favorites" class="nav-item">Favorites</NuxtLink></li>
 		</ul>
 	</nav>
 </template>
