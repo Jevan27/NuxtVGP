@@ -1,12 +1,13 @@
 <template>
 	<section class="relative w-full h-screen overflow-hidden">
 		<navbar />
-		<LaunchesSection
+		<ReusableSection
 			title="Favorite Launches"
 			description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
-			:show-button="false"
 			background-type="image"
 			background-src="/images/favorite_hero.png"
+			alignment="left"
+			:show-button="false"
 		/>
 	</section>
 	<FavoritesSection />

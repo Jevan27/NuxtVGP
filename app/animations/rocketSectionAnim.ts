@@ -8,7 +8,7 @@ interface RocketSectionElements {
 	section: HTMLElement
 	header: HTMLElement
 	desc: HTMLElement
-	button: HTMLElement
+	button: HTMLElement | null
 }
 
 export function initRocketSectionAnimations({ section, header, desc, button }: RocketSectionElements) {

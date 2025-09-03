@@ -5,14 +5,30 @@
 		<navbar />
 		<hero-banner />
 	</section>
-	<LaunchesSection
+	<ReusableSection
 		title="SpaceX Launches"
 		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
-		:show-button="true"
 		background-type="video"
 		background-src="/videos/rockets_bg.mp4"
+		alignment="left"
+		show-button
+		button-text="See All Launches"
+		button-link="/launches"
+		animation-type="launch"
 	/>
-	<RocketSection />
+
+	<ReusableSection
+		title="SpaceX Rockets"
+		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
+		background-type="image"
+		background-src="/images/launches.png"
+		alignment="right"
+		show-button
+		button-text="See All Rocktes"
+		button-link="/rockets"
+		animation-type="rocket"
+	/>
+
 	<Footer />
 </template>
 

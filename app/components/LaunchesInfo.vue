@@ -60,6 +60,7 @@
 
 <script lang="ts" setup>
 import gql from 'graphql-tag'
+import { computed } from 'vue'
 import { useFavoritesStore } from '@/stores/favorites'
 
 const favoritesStore = useFavoritesStore()
