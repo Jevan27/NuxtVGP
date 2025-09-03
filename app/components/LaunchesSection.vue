@@ -19,22 +19,27 @@
 		<div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
 		<!-- Content -->
-		<div class="relative z-10 flex items-center min-h-screen p-8">
-			<!-- Left content -->
-			<div class="w-full md:w-2/3 lg:w-1/2 text-left max-w-xl">
-				<h2 ref="header" class="text-5xl font-bold mb-10 text-white">
+		<div class="relative z-10 text-block-wrapper-left min-h-screen p-6 sm:p-8">
+			<div class="max-w-2xl w-full md:w-[600px] md:ml-12">
+				<h2
+					ref="header"
+					class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white leading-tight"
+				>
 					{{ title }}
 				</h2>
-				<p ref="desc" class="text-lg text-gray-200 mb-10">
+
+				<p
+					ref="desc"
+					class="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-10 leading-relaxed"
+				>
 					{{ description }}
 				</p>
 
-				<!-- Conditionally render button -->
 				<v-btn
 					v-show="showButton"
 					ref="button"
 					to="/launches"
-					class="bg-gray-500 hover:bg-black text-black hover:!text-white rounded-xl px-6 py-3 font-semibold text-lg shadow-lg transition-colors duration-300"
+					class="bg-gray-500 hover:bg-black text-black hover:!text-white rounded-xl px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 font-semibold text-sm sm:text-base md:text-lg shadow-lg transition-colors duration-300"
 				>
 					See All Launches
 				</v-btn>

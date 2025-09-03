@@ -13,6 +13,7 @@
 		background-src="/videos/rockets_bg.mp4"
 	/>
 	<RocketSection />
+	<Footer />
 </template>
 
 <script lang="ts" setup></script>

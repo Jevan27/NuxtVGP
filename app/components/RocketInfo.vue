@@ -1,10 +1,8 @@
 <!-- eslint-disable vue/valid-v-slot -->
 <template>
 	<div class="min-h-screen bg-[#010101] p-6 text-white">
-		<!-- ✅ Page title -->
 		<h1 class="text-4xl font-bold mb-8 tracking-wide text-center">Rockets</h1>
 
-		<!-- ✅ Year filter (right aligned under title) -->
 		<div class="flex justify-end mb-6">
 			<YearFilter v-model="selectedYear" :years="years" />
 		</div>
@@ -102,7 +100,7 @@ const { data, pending } = useAsyncQuery<{
 
 const rockets = computed(() => data.value?.rockets ?? [])
 
-// ✅ Extract unique years from first_flight
+//  Extract unique years from first_flight
 const years = computed(() => {
 	const yearSet = new Set(
 		rockets.value.filter((r) => r.first_flight).map((r) => new Date(r.first_flight).getFullYear()),
@@ -112,12 +110,12 @@ const years = computed(() => {
 
 const selectedYear = ref<number | null>(null)
 
-// ✅ Filter rockets by selected year
+//  Filter rockets by selected year
 const filteredRockets = computed(() => {
 	if (!selectedYear.value) return rockets.value
 	return rockets.value.filter((r) => new Date(r.first_flight).getFullYear() === selectedYear.value)
 })
 
-// ✅ Currently all filtered rockets shown
+//  Currently all filtered rockets shown
 const paginatedRockets = computed(() => filteredRockets.value)
 </script>

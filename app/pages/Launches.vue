@@ -12,6 +12,7 @@
 		/>
 	</section>
 	<LaunchesInfo />
+	<Footer />
 </template>
 
 <script lang="ts" setup></script>

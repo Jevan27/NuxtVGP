@@ -110,7 +110,7 @@ const { data, pending } = useAsyncQuery<{
 
 const launches = computed(() => data.value?.launches ?? [])
 
-// ✅ Extract unique years from launches
+//  Extract unique years from launches
 const years = computed(() => {
 	const yearSet = new Set(launches.value.map((l) => new Date(l.launch_date_local).getFullYear()))
 	return Array.from(yearSet).sort((a, b) => b - a) // sort descending
@@ -118,12 +118,12 @@ const years = computed(() => {
 
 const selectedYear = ref<number | null>(null)
 
-// ✅ Filtered launches based on year
+//  Filtered launches based on year
 const filteredLaunches = computed(() => {
 	if (!selectedYear.value) return launches.value
 	return launches.value.filter((l) => new Date(l.launch_date_local).getFullYear() === selectedYear.value)
 })
 
-// ✅ Controls how many rows are visible
+//  Controls how many rows are visible
 const paginatedLaunches = computed(() => filteredLaunches.value)
 </script>

@@ -56,7 +56,7 @@
 			</template>
 		</v-data-table>
 
-		<!-- ✅ Confirmation dialogs -->
+		<!-- Confirmation dialogs -->
 		<ConfirmDialog
 			v-model="showClearAllDialog"
 			title="Delete All Favorites"
@@ -107,7 +107,7 @@ const filteredFavorites = computed(() => {
 	)
 })
 
-// ✅ Confirmation dialog states
+// Confirmation dialog states
 const showClearAllDialog = ref(false)
 const showDeleteRowDialog = ref(false)
 const rowToDelete = ref<any>(null)

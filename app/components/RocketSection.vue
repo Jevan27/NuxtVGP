@@ -1,4 +1,3 @@
-<!-- src/components/RocketSection.vue -->
 <template>
 	<section
 		ref="section"
@@ -9,11 +8,15 @@
 		<div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
 		<!-- Content -->
-		<div class="relative z-10 flex justify-end items-center min-h-screen p-8">
-			<!-- Right content -->
-			<div class="w-full md:w-2/3 lg:w-1/2 text-left max-w-xl">
-				<h2 ref="header" class="text-5xl font-bold mb-10 text-white">SpaceX Rockets</h2>
-				<p ref="desc" class="text-lg text-gray-200 mb-10">
+		<div class="relative z-10 text-block-wrapper-right min-h-screen p-6 mr-12 sm:p-8">
+			<div class="max-w-2xl w-full md:w-[600px] md:ml-12">
+				<h2
+					ref="header"
+					class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10 text-white"
+				>
+					SpaceX Rockets
+				</h2>
+				<p ref="desc" class="text-base sm:text-lg md:text-xl text-gray-200 mb-10">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
 					libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
 					imperdiet.
