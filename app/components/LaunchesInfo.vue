@@ -6,24 +6,14 @@
 
 		<!-- ✅ Year filter (right aligned under title) -->
 		<div class="flex justify-end mb-6">
-			<div class="w-40">
-				<v-select
-					v-model="selectedYear"
-					:items="years"
-					label="Filter by Year"
-					variant="outlined"
-					density="comfortable"
-					clearable
-					class="custom-select text-sm"
-				/>
-			</div>
+			<YearFilter v-model="selectedYear" :years="years" />
 		</div>
 
 		<v-data-table
 			:headers="headers"
 			:items="paginatedLaunches"
 			:loading="pending"
-			class="custom-table bg-transparent text-white"
+			class="custom-table favorites-table bg-transparent text-white"
 		>
 			<!-- Format fields -->
 			<template #item.launch_date_local="{ item }">

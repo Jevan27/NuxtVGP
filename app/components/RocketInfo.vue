@@ -6,17 +6,7 @@
 
 		<!-- ✅ Year filter (right aligned under title) -->
 		<div class="flex justify-end mb-6">
-			<div class="w-40">
-				<v-select
-					v-model="selectedYear"
-					:items="years"
-					label="Filter by Year"
-					variant="outlined"
-					density="comfortable"
-					clearable
-					class="custom-select text-sm"
-				/>
-			</div>
+			<YearFilter v-model="selectedYear" :years="years" />
 		</div>
 
 		<v-data-table

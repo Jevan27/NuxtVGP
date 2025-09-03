@@ -67,6 +67,11 @@
 	min-width: 120px;
 }
 
+.favorites-table td:last-child,
+.favorites-table th:last-child {
+	text-align: center !important;
+}
+
 /* 🎨 White v-select */
 .custom-select .v-field {
 	color: white !important;
