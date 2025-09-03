@@ -21,7 +21,7 @@
 		title="SpaceX Rockets"
 		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
 		background-type="image"
-		background-src="/images/launches.png"
+		background-src="/images/launches.jpg"
 		alignment="right"
 		show-button
 		button-text="See All Rocktes"
