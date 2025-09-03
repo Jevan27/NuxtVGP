@@ -51,3 +51,5 @@ pnpm dev
 Other Images & Videos: AI-generated
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## This project is for assessment purposes only
