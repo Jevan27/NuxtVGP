@@ -23,8 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
 import { initHeroAnimations } from '@/animations/heroAnim'
+import { onMounted, ref } from 'vue'
 
 const title = ref<HTMLElement | null>(null)
 const subtitle = ref<HTMLElement | null>(null)
