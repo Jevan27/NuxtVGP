@@ -22,9 +22,13 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'vercel',
 	},
+	devtools: {
+		enabled: false,
+	},
 	vite: {
 		optimizeDeps: {
 			include: ['graphql-tag'],
+			exclude: ['vite-plugin-inspect'],
 		},
 		plugins: [vuetify()],
 	},

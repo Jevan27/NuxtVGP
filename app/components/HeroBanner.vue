@@ -3,7 +3,10 @@
 	<div class="relative h-screen w-full overflow-hidden">
 		<!-- Background video -->
 		<video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-			<source src="/videos/spacex_hero.mp4" type="video/mp4" />
+			<source
+				src="https://5d1ixzxi6ukfni7k.public.blob.vercel-storage.com/videos/spacex_hero.mp4"
+				type="video/mp4"
+			/>
 		</video>
 
 		<!-- Dark overlay -->
