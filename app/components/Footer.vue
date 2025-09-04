@@ -47,8 +47,13 @@
 							>
 								<Twitter class="w-5 h-5" />
 							</a>
-							<a href="mailto:media@spacex.com" aria-label="Email" class="hover:text-gray-400">
-								<Mail class="w-5 h-5" />
+							<a
+								href="https://github.com/Jevan27/NuxtVGP"
+								target="_blank"
+								aria-label="Github"
+								class="hover:text-gray-400"
+							>
+								<Github class="w-5 h-5" />
 							</a>
 							<a
 								href="https://www.instagram.com/spacex/"
@@ -115,8 +120,13 @@
 						>
 							<Twitter class="w-5 h-5" />
 						</a>
-						<a href="mailto:media@spacex.com" aria-label="Email" class="hover:text-gray-400">
-							<Mail class="w-5 h-5" />
+						<a
+							href="https://github.com/Jevan27/NuxtVGP"
+							target="_blank"
+							aria-label="Github"
+							class="hover:text-gray-400"
+						>
+							<Github class="w-5 h-5" />
 						</a>
 						<a
 							href="https://www.instagram.com/spacex/"
@@ -147,5 +157,5 @@
 </template>
 
 <script setup>
-import { Facebook, Globe, Instagram, Mail, Twitter } from 'lucide-vue-next'
+import { Facebook, Github, Globe, Instagram, Twitter } from 'lucide-vue-next'
 </script>
