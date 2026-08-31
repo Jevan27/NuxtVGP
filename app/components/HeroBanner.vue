@@ -3,10 +3,7 @@
 	<div class="relative h-screen w-full overflow-hidden">
 		<!-- Background video -->
 		<video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-			<source
-				src="https://5d1ixzxi6ukfni7k.public.blob.vercel-storage.com/videos/spacex_hero.mp4"
-				type="video/mp4"
-			/>
+			<source :src="heroVideoSrc" type="video/mp4" />
 		</video>
 
 		<!-- Dark overlay -->
@@ -27,7 +24,10 @@
 
 <script setup lang="ts">
 import { initHeroAnimations } from '@/animations/heroAnim'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+
+const config = useRuntimeConfig()
+const heroVideoSrc = computed(() => `${config.public.blobBaseUrl}/videos/spacex_hero.mp4`)
 
 const title = ref<HTMLElement | null>(null)
 const subtitle = ref<HTMLElement | null>(null)

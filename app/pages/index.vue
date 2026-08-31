@@ -9,7 +9,7 @@
 		title="SpaceX Launches"
 		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
 		background-type="video"
-		background-src="https://5d1ixzxi6ukfni7k.public.blob.vercel-storage.com/videos/rockets_bg.mp4"
+		:background-src="rocketsBgVideoSrc"
 		alignment="left"
 		show-button
 		button-text="See All Launches"
@@ -32,4 +32,9 @@
 	<Footer />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from 'vue'
+
+const config = useRuntimeConfig()
+const rocketsBgVideoSrc = computed(() => `${config.public.blobBaseUrl}/videos/rockets_bg.mp4`)
+</script>

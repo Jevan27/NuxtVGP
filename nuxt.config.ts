@@ -12,11 +12,30 @@ export default defineNuxtConfig({
 		baseURL: '/', // default, but keep it explicit
 	},
 
+	runtimeConfig: {
+		blobReadWriteToken: process.env.BLOB_READ_WRITE_TOKEN,
+		public: {
+			blobBaseUrl:
+				process.env.BLOB_BASE_URL ||
+				process.env.NUXT_PUBLIC_BLOB_BASE_URL ||
+				'https://5d1ixzxi6ukfni7k.public.blob.vercel-storage.com',
+			spacexApiUrl:
+				process.env.SPACEX_GRAPHQL_URL ||
+				process.env.NUXT_PUBLIC_SPACEX_API_URL ||
+				'https://spacex-production.up.railway.app/',
+		},
+	},
+
 	apollo: {
 		autoImports: true,
 		proxyCookies: true,
 		clients: {
-			default: { httpEndpoint: 'https://spacex-production.up.railway.app/' },
+			default: {
+				httpEndpoint:
+					process.env.SPACEX_GRAPHQL_URL ||
+					process.env.NUXT_PUBLIC_SPACEX_API_URL ||
+					'https://spacex-production.up.railway.app/',
+			},
 		},
 	},
 	nitro: {
